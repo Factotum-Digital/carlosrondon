@@ -308,15 +308,15 @@ header {
 }
 
 .carousel-slide .slide-bg.bg-slide-1 {
-  background-image: url('hero1.jpeg');
+  background-image: url('/hero1.jpeg');
 }
 
 .carousel-slide .slide-bg.bg-slide-2 {
-  background-image: url('hero2.jpeg');
+  background-image: url('/hero2.jpeg');
 }
 
 .carousel-slide .slide-bg.bg-slide-3 {
-  background-image: url('hero3.png');
+  background-image: url('/hero3.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

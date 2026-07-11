@@ -1392,11 +1392,11 @@ footer {
 
 /* Custom adjustments for slide 3 CTA placement */
 .slide3-cta-container {
-  margin-top: 240px !important;
+  margin-top: 420px !important;
 }
 
 @media (max-width: 768px) {
   .slide3-cta-container {
-    margin-top: 140px !important;
+    margin-top: 300px !important;
   }
 }

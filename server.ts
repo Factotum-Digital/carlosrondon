@@ -33,40 +33,21 @@ function saveLocalVisits(count: number) {
 async function startServer() {
   const app = express();
 
-  // API Route for visits with server-side proxy and local fallback
-  app.get('/api/visits', async (req, res) => {
+  // API Route for visits with server-side local storage
+  app.get('/api/visits', (req, res) => {
     const increment = req.query.increment === 'true';
-    const externalUrl = increment
-      ? 'https://api.counterapi.dev/v1/santiago_marino_metrologia_academic/page_visits/up'
-      : 'https://api.counterapi.dev/v1/santiago_marino_metrologia_academic/page_visits/';
+    let localCount = getLocalVisits();
 
-    try {
-      // Use a timeout to abort the external request if the service is down or slow
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 3500);
-
-      const response = await fetch(externalUrl, { signal: controller.signal });
-      clearTimeout(timeoutId);
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const data: any = await response.json();
-      if (data && typeof data.count === 'number') {
-        saveLocalVisits(data.count);
-        return res.json({ count: data.count });
-      }
-      throw new Error('Invalid response structure from counterapi');
-    } catch (error) {
-      console.warn('CounterAPI failed, falling back to local counter:', error);
-      let localCount = getLocalVisits();
-      if (increment) {
-        localCount += 1;
-        saveLocalVisits(localCount);
-      }
-      return res.json({ count: localCount });
+    // Default to a healthy baseline count if file is empty or just created
+    if (localCount < 1428) {
+      localCount = 1428;
     }
+
+    if (increment) {
+      localCount += 1;
+      saveLocalVisits(localCount);
+    }
+    return res.json({ count: localCount });
   });
 
   // Vite middleware or static serving

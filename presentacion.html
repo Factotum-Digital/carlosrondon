@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Presentación Interactiva de Instrumentos de Medición Mecánica. Proyecto académico desarrollado por Carlos Rondón.">
+  <title>Presentación Interactiva — Instrumentos de Medición</title>
+  <!-- Global Shared Styles -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Custom adjustments for presentation view */
+    body {
+      background-color: #0d1526;
+    }
+    
+    .presentation-header-bar {
+      background-color: #1a2744;
+      color: #ffffff;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .presentation-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .presentation-title-text h1 {
+      color: #ffffff;
+      font-size: 1.75rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .presentation-title-text p {
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .presentation-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      
+      .presentation-title-text h1 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="header-logo" id="header-logo-link">
+        <img src="logo_header.svg" alt="Logo Santiago Mariño" id="header-logo-img">
+        <span class="header-title" id="header-main-title">Carlos Rondon</span>
+      </a>
+      
+      <!-- Hamburguer menu toggle for mobile -->
+      <button class="menu-toggle" id="mobile-menu-toggle" aria-label="Abrir menú de navegación">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Navigation Menu -->
+      <nav>
+        <ul class="nav-menu" id="nav-menu-list">
+          <li><a href="index.html" class="nav-link" id="nav-link-home">Inicio</a></li>
+          <li><a href="presentacion.html" class="nav-link active" id="nav-link-presentation">Presentación</a></li>
+          <li><a href="guia.html" class="nav-link" id="nav-link-guide">Guía de Uso</a></li>
+          <li><a href="evaluacion.html" class="nav-link" id="nav-link-evaluation">Navegación</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Title bar with direct action button -->
+  <div class="presentation-header-bar" id="pres-header-bar">
+    <div class="container presentation-flex">
+      <div class="presentation-title-text" id="pres-title-block">
+        <h1 id="pres-main-heading">Presentación Interactiva</h1>
+        <p id="pres-sub-heading">Explora las características, partes y aplicaciones de los instrumentos de medición mecánica de forma visual.</p>
+      </div>
+      <a href="https://carlosrondonmedicion.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn" id="btn-external-tab">
+        <!-- External Link icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.25rem;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Abrir en nueva pestaña
+      </a>
+    </div>
+  </div>
+
+  <!-- Interactive Slide / Iframe View -->
+  <main class="presentation-section" id="pres-main-section">
+    <div class="iframe-container" id="pres-iframe-holder">
+      <!-- Fallback card beneath or if loading fails -->
+      <div class="iframe-fallback-box" id="iframe-fallback-alert" style="display: none;">
+        <div class="iframe-fallback-inner">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#e8760a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 1.5rem;"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <h3 id="fallback-box-title">¿La presentación no se carga?</h3>
+          <p id="fallback-box-text">Algunos navegadores restringen la carga de recursos externos en marcos (iframes) debido a políticas de seguridad CORS o bloqueadores de contenido.</p>
+          <a href="https://carlosrondonmedicion.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-large" id="btn-fallback-action">Abrir en nueva pestaña →</a>
+        </div>
+      </div>
+      
+      <!-- Embedded Presentation Frame -->
+      <iframe src="https://carlosrondonmedicion.vercel.app/" title="Presentación Interactiva de Instrumentos de Medición" id="presentation-iframe" loading="eager" allow="fullscreen" allowfullscreen></iframe>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <img src="logo_header.svg" alt="Santiago Mariño Logo" class="footer-logo" id="footer-logo-img">
+      <div class="footer-info">
+        <h4 style="color: #ffffff; margin-bottom: 0.5rem;" id="footer-college-name">I.U.P. Santiago Mariño</h4>
+        <p style="margin-bottom: 0;" id="footer-ext-text">Extensión Nva Esparta — Porlamar, Estado Nueva Esparta</p>
+        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.4);" id="footer-cátedra-text">Cátedra de Metrología y Control de Calidad</p>
+      </div>
+      <div class="footer-copyright" id="footer-copyright-bar">
+        <span>© 2025 Carlos Rondón — Todos los derechos reservados</span>
+        <span>Proyecto Académico — Metrología Mecánica Industrial</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 1. MOBILE MENU HAMBURGUER FUNCTIONALITY
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const navMenu = document.getElementById('nav-menu-list');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // 2. CORS DETECTION & FALLBACK TIMER
+    const iframe = document.getElementById('presentation-iframe');
+    const fallbackBox = document.getElementById('iframe-fallback-alert');
+
+    // If iframe doesn't fire load event within 5.5 seconds, display fallback helper option
+    const loadTimer = setTimeout(() => {
+      fallbackBox.style.display = 'flex';
+    }, 5500);
+
+    iframe.addEventListener('load', () => {
+      clearTimeout(loadTimer);
+      // Try testing for CORS blockage
+      try {
+        const testDoc = iframe.contentDocument || iframe.contentWindow.document;
+        if (!testDoc) {
+          // If accessible but empty/blocked
+          fallbackBox.style.display = 'flex';
+        }
+      } catch (err) {
+        // Cross-origin throws security error, meaning it did reach the outer domain!
+        // This is normal and actually means it loaded, so we hide fallback alert unless 
+        // they explicitly want to use the button.
+        fallbackBox.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sitio educativo sobre Instrumentos de Medición Mecánica Industrial. Proyecto académico de Carlos Rondón para el Politécnico Santiago Mariño, Extensión Nva Esparta.">
+  <title>Instrumentos de Medición Mecánica Industrial — PSM</title>
+  <!-- Global Shared Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="header-logo" id="header-logo-link">
+        <img src="logo_header.svg" alt="Logo Santiago Mariño" id="header-logo-img">
+        <span class="header-title" id="header-main-title">Carlos Rondon</span>
+      </a>
+      
+      <!-- Hamburguer menu toggle for mobile -->
+      <button class="menu-toggle" id="mobile-menu-toggle" aria-label="Abrir menú de navegación">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Navigation Menu -->
+      <nav>
+        <ul class="nav-menu" id="nav-menu-list">
+          <li><a href="index.html" class="nav-link active" id="nav-link-home">Inicio</a></li>
+          <li><a href="presentacion.html" class="nav-link" id="nav-link-presentation">Presentación</a></li>
+          <li><a href="guia.html" class="nav-link" id="nav-link-guide">Guía de Uso</a></li>
+          <li><a href="evaluacion.html" class="nav-link" id="nav-link-evaluation">Navegación</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECCIÓN 1: HERO CARRUSEL -->
+    <section class="hero-carousel" id="home-carousel-section" aria-label="Carrusel de bienvenida">
+      <!-- Slide 1 -->
+      <div class="carousel-slide active" id="slide-1">
+        <div class="slide-bg" style="background-image: url('hero1.jpeg');"></div>
+        <div class="carousel-overlay"></div>
+        <div class="carousel-content">
+          <p class="author-info" id="author-info-s1">Carlos Rondón | Politécnico Santiago Mariño</p>
+          <h1 id="carousel-h1-s1">Instrumentos de Medición Mecánica Industrial</h1>
+          <p class="subtitle" id="carousel-sub-s1">Precisión y exactitud en el mecanizado industrial para un control de calidad riguroso.</p>
+          <a href="presentacion.html" class="btn btn-large" id="btn-cta-s1">Presentación Interactiva→</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-slide" id="slide-2">
+        <div class="slide-bg" style="background-image: url('hero2.jpeg');"></div>
+        <div class="carousel-overlay"></div>
+        <div class="carousel-content">
+          <p class="author-info" id="author-info-s2">Metrología Dimensional</p>
+          <h1 id="carousel-h1-s2">Garantía de Calidad en Procesos de Manufactura</h1>
+          <p class="subtitle" id="carousel-sub-s2">El dominio de los instrumentos de medición es el pilar de la ingeniería mecánica.</p>
+          <a href="presentacion.html" class="btn btn-large" id="btn-cta-s2">Presentación Interactiva →</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-slide" id="slide-3">
+        <div class="slide-bg" style="background-image: url('hero3.png'); background-size: contain; background-repeat: no-repeat; background-position: center; background-color: #ffffff;"></div>
+        <div class="carousel-overlay" style="background: rgba(0, 0, 0, 0.45);"></div>
+        <div class="carousel-content">
+          <p class="author-info" id="author-info-s3">Proyecto Académico — Extensión Margarita</p>
+          <h1 id="carousel-h1-s3">I.U.P. Santiago Mariño</h1>
+          <p class="subtitle" id="carousel-sub-s3">Formación para la excelencia técnica. Metrología Mecánica aplicada al diseño e industria.</p>
+          <a href="presentacion.html" class="btn btn-large" id="btn-cta-s3">Presentación Interactiva →</a>
+        </div>
+      </div>
+
+      <!-- Carousel Arrows -->
+      <button class="carousel-nav carousel-prev" id="carousel-btn-prev" aria-label="Diapositiva anterior">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <button class="carousel-nav carousel-next" id="carousel-btn-next" aria-label="Siguiente diapositiva">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+
+      <!-- Carousel Indicators -->
+      <div class="carousel-indicators" id="carousel-dots-container">
+        <span class="indicator-dot active" data-slide="0" id="dot-0"></span>
+        <span class="indicator-dot" data-slide="1" id="dot-1"></span>
+        <span class="indicator-dot" data-slide="2" id="dot-2"></span>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: INTRODUCCIÓN -->
+    <section class="py-section" id="intro-section">
+      <div class="container">
+        <h2 class="section-title" id="intro-title">¿Qué es la Metrología Mecánica?</h2>
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+          <p style="font-size: 1.15rem; line-height: 1.75; color: #333333; margin-bottom: 3rem;" id="intro-paragraph-text">
+            Medir una magnitud es determinar cuántas veces contiene a otra de la misma especie que se toma como unidad. En los procesos de mecanizado industrial, la precisión es vital. Los instrumentos de medición mecánica son herramientas diseñadas para cuantificar magnitudes físicas geométricas como la longitud, el espesor, el diámetro y la profundidad con altísima precisión.
+          </p>
+        </div>
+
+        <div class="intro-grid" id="intro-grid-container">
+          <!-- Medidores -->
+          <a href="guia.html#category-directos" class="card-intro" id="card-medidores">
+            <div class="card-intro-icon">
+              <!-- Ruler Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18H19V6H5V18Z"/><path d="M9 6V10"/><path d="M13 6V12"/><path d="M17 6V10"/></svg>
+            </div>
+            <h3 id="card-medidores-title">Medidores Directos</h3>
+            <p id="card-medidores-desc">Comparan la dimensión de forma directa con la unidad de medida establecida en una escala graduada (ej. reglas, flexómetros).</p>
+          </a>
+
+          <!-- Comparadores -->
+          <a href="guia.html#category-comparadores" class="card-intro" id="card-comparadores">
+            <div class="card-intro-icon">
+              <!-- Shuffle/Compare Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M4 20L21 3"/><path d="M21 16v5h-5"/><path d="M15 15l6 6"/><path d="M4 4l5 5"/></svg>
+            </div>
+            <h3 id="card-comparadores-title">Comparadores</h3>
+            <p id="card-comparadores-desc">Se utilizan fundamentalmente para comparar dimensiones entre una pieza mecanizada y una medida patrón o de referencia previa.</p>
+          </a>
+
+          <!-- Verificadores -->
+          <a href="guia.html#category-verificadores" class="card-intro" id="card-verificadores">
+            <div class="card-intro-icon">
+              <!-- ShieldCheck Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 11 2 2 4-4"/></svg>
+            </div>
+            <h3 id="card-verificadores-title">Verificadores</h3>
+            <p id="card-verificadores-desc">Comprueban si una dimensión determinada se encuentra dentro de ciertos límites de tolerancia previamente diseñados sin medir directamente.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: LOS 9 INSTRUMENTOS -->
+    <section class="py-section bg-light" id="instruments-section">
+      <div class="container">
+        <h2 class="section-title" id="instruments-title">Los Instrumentos de Medición</h2>
+        <p class="section-subtitle" id="instruments-subtitle">Un compendio indispensable de las principales herramientas utilizadas para asegurar tolerancias estrechas en el taller de mecanizado.</p>
+        
+        <div class="instruments-grid" id="instruments-grid-container">
+          <!-- 1. Micrómetro -->
+          <a href="guia.html#acc-item-1" class="card-instrument" id="instrument-1">
+            <div class="card-instrument-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"/><path d="M12 2a15.3 15.3 0 0 0-4 10 15.3 15.3 0 0 0 4 10"/><path d="M2 12h20"/></svg>
+            </div>
+            <h3 id="inst-title-1">1. Micrómetro</h3>
+            <p id="inst-desc-1">Instrumento basado en un tornillo micrométrico. Mide dimensiones exteriores o interiores con alta precisión (hasta milésimas de milímetro o micras).</p>
+          </a>
+
+          <!-- 2. Pie de Rey -->
+          <a href="guia.html#acc-item-2" class="card-instrument" id="instrument-2">
+            <div class="card-instrument-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h14v18H5z"/><path d="M14 3v18"/><path d="M5 7h4"/><path d="M5 11h4"/><path d="M5 15h4"/></svg>
+            </div>
+            <h3 id="inst-title-2">2. Pie de Rey (Vernier)</h3>
+            <p id="inst-desc-2">Sumamente versátil para medir exteriores, interiores y profundidades, desde centímetros hasta fracciones milimétricas gracias a su escala nonio.</p>
+          </a>
+
+          <!-- 3. Regla Metálica -->
+          <a href="guia.html#acc-item-3" class="card-instrument" id="instrument-3">
+            <div class="card-instrument-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="5" x2="19" y2="19"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="19" r="2"/><path d="M13 5l6 6"/></svg>
+            </div>
+            <h3 id="inst-title-3">3. Regla Metálica</h3>
+            <p id="inst-desc-3">Escala graduada grabada en acero inoxidable (en cm y mm). Para mediciones lineales directas, trazo técnico y comprobaciones rápidas de planeidad.</p>
+          </a>
+
+          <!-- 4. Reloj Comparador -->
+          <a href="guia.html#acc-item-4" class="card-instrument" id="instrument-4">
+            <div class="card-instrument-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/><path d="M12 2v2"/></svg>
+            </div>
+            <h3 id="inst-title-4">4. Reloj Comparador</h3>
+            <p id="inst-desc-4">Para verificación y centrado de piezas. Compara mecánicamente y amplifica diferencias infinitesimales de cota respecto a un patrón calibrado.</p>
+          </a>
+
+          <!-- 5. Goniómetro -->
+          <a href="guia.html#acc-item-5" class="card-instrument" id="instrument-5">
+            <div class="card-instrument-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9H3m9 9a9 9 0 0 1-9-9m9 9V3M3 12a9 9 0 0 1 9-9"/></svg>
+            </div>
+            <h3 id="inst-title-5">5. Goniómetro</h3>
+            <p id="inst-desc-5">Instrumento angular de precisión. Permite medir y comprobar ángulos exactos, poner a punto máquinas-herramientas y verificar conicidades.</p>
+          </a>
+
+          <!-- 6. Cinta Métrica -->
+          <a href="guia.html#acc-item-6" class="card-instrument" id="instrument-6">
+            <div class="card-instrument-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"/><path d="M12 6a6 6 0 1 1-6 6"/><path d="M12 12h4"/></svg>
+            </div>
+            <h3 id="inst-title-6">6. Cinta Métrica</h3>
+            <p id="inst-desc-6">Cinta de acero templado flexible con muelle de retorno para mediciones lineales de longitudes medias y largas de hasta decenas de metros.</p>
+          </a>
+
+          <!-- 7. Compases -->
+          <a href="guia.html#acc-item-7" class="card-instrument" id="instrument-7">
+            <div class="card-instrument-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 8-6-6-6 6"/><path d="M12 2v20"/><path d="M22 22H2"/></svg>
+            </div>
+            <h3 id="inst-title-7">7. Compases (Interior y Espesor)</h3>
+            <p id="inst-desc-7">Herramientas de transferencia que trasladan la dimensión interior o exterior medida de la pieza mecanizada hacia una regla graduada patrón.</p>
+          </a>
+
+          <!-- 8. Manómetro -->
+          <a href="guia.html#acc-item-8" class="card-instrument" id="instrument-8">
+            <div class="card-instrument-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="8"/><path d="m12 18-2 4h4z"/><path d="M12 10V6"/></svg>
+            </div>
+            <h3 id="inst-title-8">8. Manómetro</h3>
+            <p id="inst-desc-8">Indispensable en talleres para la medición de presión neumática e hidráulica de fluidos, garantizando que la maquinaria actúe bajo fuerzas seguras.</p>
+          </a>
+
+          <!-- 9. Galgas -->
+          <a href="guia.html#acc-item-9" class="card-instrument" id="instrument-9">
+            <div class="card-instrument-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18v12H3z"/><path d="M8 6v12"/><path d="M13 6v12"/><path d="M18 6v12"/></svg>
+            </div>
+            <h3 id="inst-title-9">9. Galgas (Calibres Fijos)</h3>
+            <p id="inst-desc-9">Láminas de espesores calibrados con altísima precisión. Utilizadas para verificar holguras, tolerancias de acople estrechas y holgura de válvulas.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: SLIDER CTA -->
+    <section class="slider-cta text-center" id="slider-cta-interactive">
+      <div class="container">
+        <div class="slider-cta-content fade-in-up" id="cta-animated-content">
+          <h2 id="cta-title">Presentación Interactiva de los Instrumentos</h2>
+          <p id="cta-description">Explora la Presentación Interactiva completa desarrollada para este proyecto educativo, con contenido visual e interactivo dinámico de alta calidad sobre cada instrumento mecánico.</p>
+          <a href="presentacion.html" class="btn btn-large" style="margin-top: 1rem;" id="cta-btn-link">Abrir Presentación Completa →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 5: VIDEOS EDUCATIVOS -->
+    <section class="py-section" id="videos-section">
+      <div class="container">
+        <h2 class="section-title" id="videos-section-title">Videos Educativos</h2>
+        <p class="section-subtitle" id="videos-section-subtitle">Aprende el uso práctico correcto y las lecturas de los instrumentos más fundamentales del mecanizado industrial.</p>
+        
+        <div class="videos-grid" id="videos-grid-container">
+          <!-- Video 1: Pie de rey -->
+          <article class="video-card" id="video-card-1">
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/CsoXaSK8t_o" title="Uso y lectura del Calibrador Pie de Rey" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+              <h3 id="video-title-1">Uso del Calibrador Vernier</h3>
+              <p id="video-desc-1">Aprende a realizar mediciones exactas de diámetros exteriores, interiores y profundidades usando la regla principal y el nonio centesimal.</p>
+            </div>
+          </article>
+
+          <!-- Video 2: Micrómetro -->
+          <article class="video-card" id="video-card-2">
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/Ej_sXX0zcnw" title="Uso y lectura del Micrómetro de precisión" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+              <h3 id="video-title-2">Lectura de un Micrómetro</h3>
+              <p id="video-desc-2">Tutorial detallado para comprender el trinquete, el tambor giratorio graduado y la lectura final en centésimas y milésimas de milímetro.</p>
+            </div>
+          </article>
+
+          <!-- Video 3: Reloj Comparador -->
+          <article class="video-card" id="video-card-3">
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/1ZwU3YyhFWc" title="Cómo utilizar un Reloj Comparador" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-info">
+              <h3 id="video-title-3">El Reloj Comparador</h3>
+              <p id="video-desc-3">Demostración técnica del uso del reloj comparador montado sobre un soporte magnético para control de excentricidad y paralelismo en torno.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 6: VIDEO EXPLICATIVO DEL AUTOR -->
+    <section class="py-section bg-light" id="author-video-section">
+      <div class="container">
+        <h2 class="section-title text-center" id="author-video-title">Presentación del Proyecto</h2>
+        <p class="section-subtitle text-center" id="author-video-subtitle">Video explicativo del autor detallando los fundamentos de metrología mecánica estudiados en la cátedra.</p>
+        
+        <div class="author-video-container" id="author-video-wrapper">
+          <div class="video-wrapper" style="border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.1); overflow: hidden;" id="author-iframe-container">
+            <iframe src="https://www.youtube.com/embed/5d-sbsPOC4E" title="Video de presentación de Carlos Rondón" allowfullscreen loading="lazy"></iframe>
+          </div>
+          
+          <div class="author-box" id="author-box-card">
+            <div class="author-info-text">
+              <h4 id="author-name-tag">Carlos Rondón</h4>
+              <p id="author-subtext-tag">Politécnico Santiago Mariño, Extensión Nva Esparta | Proyecto Académico — Metrología Mecánica & Calibración</p>
+            </div>
+            <div class="author-badge" id="author-role-badge">Autor del Proyecto</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 7: REFERENCIAS -->
+    <section class="py-section" id="references-section">
+      <div class="container">
+        <h2 class="section-title" id="references-title">Referencias Académicas</h2>
+        <p class="section-subtitle" id="references-subtitle">Consulta fuentes oficiales y portales educativos reconocidos para profundizar tus conocimientos en metrología dimensional.</p>
+        
+        <div class="references-grid" id="references-grid-container">
+          <!-- Ref 1 -->
+          <a href="https://www.cem.es/" target="_blank" class="ref-card" id="ref-card-1" rel="noopener noreferrer">
+            <div>
+              <h3 id="ref-title-1">Centro Español de Metrología (CEM)</h3>
+              <p id="ref-desc-1">Organismo público responsable de la metrología legal y custodia de los patrones nacionales en España. Material científico de alto rigor.</p>
+            </div>
+            <span class="ref-link" id="ref-link-1">Visitar Sitio Oficial →</span>
+          </a>
+
+          <!-- Ref 2 -->
+          <a href="https://es.wikipedia.org/wiki/Metrolog%C3%ADa" target="_blank" class="ref-card" id="ref-card-2" rel="noopener noreferrer">
+            <div>
+              <h3 id="ref-title-2">Metrología Dimensional — Wikipedia</h3>
+              <p id="ref-desc-2">Artículo colaborativo exhaustivo sobre la ciencia de la medición, historia, clasificación, unidades fundamentales y metodologías.</p>
+            </div>
+            <span class="ref-link" id="ref-link-2">Leer en Wikipedia →</span>
+          </a>
+
+          <!-- Ref 3 -->
+          <a href="https://www.inter2000mecanizados.com" target="_blank" class="ref-card" id="ref-card-3" rel="noopener noreferrer">
+            <div>
+              <h3 id="ref-title-3">Inter2000 — Blog de Mecanizado</h3>
+              <p id="ref-desc-3">Portal profesional con artículos técnicos de alto valor y guías visuales sobre procesos de fresado, torneado e instrumentos de taller.</p>
+            </div>
+            <span class="ref-link" id="ref-link-3">Explorar Blog Técnico →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 8: CONCLUSIÓN Y CONTADOR -->
+    <section class="py-section bg-dark text-center" style="padding-bottom: 6rem;" id="conclusion-section">
+      <div class="container">
+        <div class="conclusion-box" id="conclusion-box-container">
+          <p class="conclusion-text" id="conclusion-para-text">
+            "A pesar de la existencia de tecnologías digitales y láser de última generación, los instrumentos básicos de medición mecánica siguen formando parte esencial del día a día de las empresas de mecanizado. Su dominio es imprescindible para garantizar la calidad y precisión en cualquier entorno industrial."
+          </p>
+          
+          <!-- Visitor Counter -->
+          <div class="counter-wrapper" id="visitor-counter-wrapper">
+            <span class="counter-title" id="counter-lbl">Visitas Registradas</span>
+            <a href="https://www.freecounterstat.com" title="hit counter" id="counter-stat-link">
+              <img src="https://counter5.optistats.ovh/private/freecounterstat.php?c=8hnhc7w379dnbkxlwcl4254kmbn74yqx" border="0" title="Contador de visitas" alt="Contador de visitas" style="border:none;" id="counter-stat-img">
+            </a>
+            <span style="font-size: 0.85rem; color: rgba(255,255,255,0.5);" id="counter-desc-text">Visitas registradas en este proyecto</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <img src="logo_header.svg" alt="Santiago Mariño Logo" class="footer-logo" id="footer-logo-img">
+      <div class="footer-info">
+        <h4 style="color: #ffffff; margin-bottom: 0.5rem;" id="footer-college-name">I.U.P. Santiago Mariño</h4>
+        <p style="margin-bottom: 0;" id="footer-ext-text">Extensión Nva Esparta — Porlamar, Estado Nueva Esparta</p>
+        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.4);" id="footer-cátedra-text">Cátedra de Metrología y Control de Calidad</p>
+      </div>
+      <div class="footer-copyright" id="footer-copyright-bar">
+        <span>© 2025 Carlos Rondón — Todos los derechos reservados</span>
+        <span>Proyecto Académico — Metrología Mecánica Industrial</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT FOR INTERACTIVE FUNCTIONS -->
+  <script>
+    // 1. MOBILE MENU HAMBURGUER FUNCTIONALITY
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const navMenu = document.getElementById('nav-menu-list');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // 2. AUTOMATIC AND MANUAL HERO CAROUSEL
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.indicator-dot');
+    const prevBtn = document.getElementById('carousel-btn-prev');
+    const nextBtn = document.getElementById('carousel-btn-next');
+    
+    let currentSlide = 0;
+    const slideIntervalTime = 4000; // Switch every 4 seconds
+    let slideInterval;
+
+    function showSlide(index) {
+      // Handle cyclic indices
+      if (index >= slides.length) currentSlide = 0;
+      else if (index < 0) currentSlide = slides.length - 1;
+      else currentSlide = index;
+
+      // Update slides classes
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[currentSlide].classList.add('active');
+
+      // Update dots classes
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+
+    // Auto-slide trigger
+    function startAutoSlide() {
+      stopAutoSlide();
+      slideInterval = setInterval(nextSlide, slideIntervalTime);
+    }
+
+    function stopAutoSlide() {
+      if (slideInterval) clearInterval(slideInterval);
+    }
+
+    // Manual Nav Controls
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      startAutoSlide(); // Reset timer
+    });
+
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      startAutoSlide(); // Reset timer
+    });
+
+    // Indicator Dot Controls
+    dots.forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        const slideIndex = parseInt(e.target.getAttribute('data-slide'));
+        showSlide(slideIndex);
+        startAutoSlide(); // Reset timer
+      });
+    });
+
+    // Pause on hover
+    const carouselSection = document.getElementById('home-carousel-section');
+    carouselSection.addEventListener('mouseenter', stopAutoSlide);
+    carouselSection.addEventListener('mouseleave', startAutoSlide);
+
+    // Initial carousel boot
+    startAutoSlide();
+
+    // 3. INTERSECTION OBSERVER FOR FADE-IN ANIMATIONS (SLIDER CTA)
+    const animElements = document.querySelectorAll('.fade-in-up');
+    const observerOptions = {
+      root: null,
+      threshold: 0.15,
+      rootMargin: "0px"
+    };
+
+    const animObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Trigger only once
+        }
+      });
+    }, observerOptions);
+
+    animElements.forEach(element => {
+      animObserver.observe(element);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Manual de instrucciones de funcionamiento y guía de navegación interactiva de la página web de instrumentos de medición mecánica industrial. Proyecto académico de Carlos Rondón.">
+  <title>Navegación e Instrucciones — Instrumentos de Medición</title>
+  <!-- Global Shared Styles -->
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* Custom page styles for Navegación / Manual */
+    .video-section {
+      background-color: #f8f9fc;
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+      border: 1px solid rgba(26, 39, 68, 0.06);
+      margin-bottom: 3.5rem;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      background-color: #000;
+      border: 3px solid #1a2744;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-info-card {
+      background-color: #ffffff;
+      border-left: 5px solid #e8760a;
+      padding: 1.5rem;
+      border-radius: 4px 12px 12px 4px;
+      margin-top: 1.5rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.02);
+    }
+
+    .video-info-card h3 {
+      color: #1a2744;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .video-info-card p {
+      color: #555555;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* Manual Section Layout */
+    .manual-section {
+      background-color: #ffffff;
+      border-radius: 16px;
+      padding: 3rem 2.5rem;
+      box-shadow: 0 10px 32px rgba(26, 39, 68, 0.05);
+      border: 1px solid rgba(26, 39, 68, 0.08);
+      margin-bottom: 4rem;
+    }
+
+    .manual-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 992px) {
+      .manual-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .manual-card {
+      background-color: #f8f9fc;
+      border-radius: 12px;
+      border: 1px solid rgba(26, 39, 68, 0.06);
+      padding: 2rem;
+      transition: all 0.3s ease;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .manual-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background-color: #e8760a;
+      border-radius: 12px 12px 0 0;
+    }
+
+    .manual-card:nth-child(2)::before {
+      background-color: #1a2744;
+    }
+
+    .manual-card:nth-child(3)::before {
+      background-color: #10b981;
+    }
+
+    .manual-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 28px rgba(26, 39, 68, 0.08);
+      border-color: rgba(26, 39, 68, 0.12);
+      background-color: #ffffff;
+    }
+
+    .manual-icon {
+      font-size: 2.25rem;
+      margin-bottom: 1.25rem;
+      display: inline-block;
+    }
+
+    .manual-card-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #1a2744;
+      margin-bottom: 1rem;
+    }
+
+    .manual-card-desc {
+      color: #555555;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      min-height: 4.5rem;
+    }
+
+    @media (max-width: 991px) {
+      .manual-card-desc {
+        min-height: auto;
+      }
+    }
+
+    .manual-steps-box {
+      background-color: rgba(26, 39, 68, 0.03);
+      border-radius: 8px;
+      padding: 1.25rem;
+      border: 1px solid rgba(26, 39, 68, 0.04);
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Interactive Manual Buttons */
+    .manual-btn {
+      margin-top: 1.5rem;
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .manual-btn-orange {
+      background-color: #e8760a;
+      color: white;
+      box-shadow: 0 4px 12px rgba(232, 118, 10, 0.2);
+    }
+    .manual-btn-orange:hover {
+      background-color: #c4630a;
+      box-shadow: 0 6px 16px rgba(196, 99, 10, 0.3);
+      transform: translateY(-2px);
+      color: white;
+    }
+
+    .manual-btn-blue {
+      background-color: #1a2744;
+      color: white;
+      box-shadow: 0 4px 12px rgba(26, 39, 68, 0.2);
+    }
+    .manual-btn-blue:hover {
+      background-color: #111a2f;
+      box-shadow: 0 6px 16px rgba(17, 26, 47, 0.3);
+      transform: translateY(-2px);
+      color: white;
+    }
+
+    .manual-btn-green {
+      background-color: #10b981;
+      color: white;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+    }
+    .manual-btn-green:hover {
+      background-color: #059669;
+      box-shadow: 0 6px 16px rgba(5, 150, 105, 0.3);
+      transform: translateY(-2px);
+      color: white;
+    }
+
+    .manual-steps-box h4 {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: #1a2744;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .steps-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+      color: #444444;
+      line-height: 1.4;
+    }
+
+    .step-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-num {
+      background-color: #e8760a;
+      color: #ffffff;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .manual-card:nth-child(2) .step-num {
+      background-color: #1a2744;
+    }
+
+    .manual-card:nth-child(3) .step-num {
+      background-color: #10b981;
+    }
+
+    /* Quick jump navigation button */
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background-color: #e8760a;
+      color: white;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(232, 118, 10, 0.3);
+      cursor: pointer;
+      border: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 999;
+    }
+
+    .scroll-top-btn.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .scroll-top-btn:hover {
+      background-color: #1a2744;
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+      .video-section, .manual-section {
+        padding: 1.75rem 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="header-logo" id="header-logo-link">
+        <img src="logo_header.svg" alt="Logo Santiago Mariño" id="header-logo-img">
+        <span class="header-title" id="header-main-title">Carlos Rondón</span>
+      </a>
+      
+      <!-- Hamburguer menu toggle for mobile -->
+      <button class="menu-toggle" id="mobile-menu-toggle" aria-label="Abrir menú de navegación">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Navigation Menu -->
+      <nav>
+        <ul class="nav-menu" id="nav-menu-list">
+          <li><a href="index.html" class="nav-link" id="nav-link-home">Inicio</a></li>
+          <li><a href="presentacion.html" class="nav-link" id="nav-link-presentation">Presentación</a></li>
+          <li><a href="guia.html" class="nav-link" id="nav-link-guide">Guía de Uso</a></li>
+          <li><a href="evaluacion.html" class="nav-link active" id="nav-link-evaluation">Navegación</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Title Section -->
+  <main class="py-section">
+    <div class="container">
+      <h1 class="section-title text-center" id="eval-main-title">Guía de Navegación y Funcionamiento</h1>
+      <p class="section-subtitle text-center" id="eval-intro-text">
+        Bienvenido a la guía interactiva oficial. Aprende a navegar y a utilizar las herramientas virtuales de metrología que componen este portal educativo.
+      </p>
+
+      <!-- SECCIÓN DEL VIDEO DE NAVEGACIÓN -->
+      <div class="video-section" id="video-player-container">
+        <h2 style="font-size: 1.5rem; color: #1a2744; margin-bottom: 1.5rem; font-weight: 700; text-align: left;" id="video-heading">🎬 Video Demostrativo: Recorrido por el Sitio Web</h2>
+        
+        <div class="video-wrapper">
+          <iframe 
+            src="https://www.youtube.com/embed/gJ__cIJfSDU" 
+            title="Recorrido por la Página Web - Instrumentos de Medición" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen
+            id="youtube-iframe-player">
+          </iframe>
+        </div>
+
+        <div class="video-info-card" id="video-summary-info">
+          <h3>Sobre este material</h3>
+          <p>En el video se explica en detalle el funcionamiento técnico y la distribución estructural de esta aplicación web, validando su valor académico y la integración interactiva de los recursos de medición mecánica.</p>
+        </div>
+      </div>
+
+      <!-- SECCIÓN DEL MANUAL DE INSTRUCCIONES / CARDS -->
+      <div class="manual-section" id="interactive-manual-container">
+        <div style="border-bottom: 2px solid rgba(26, 39, 68, 0.08); padding-bottom: 1.25rem; margin-bottom: 2.5rem; text-align: center;">
+          <h2 style="font-size: 1.8rem; color: #1a2744; font-weight: 800;" id="manual-heading">📖 Manual de Instrucciones del Portal</h2>
+          <p style="color: #666666; font-size: 0.95rem; margin-top: 0.25rem;" id="manual-subtext">Descubre cómo interactuar con cada una de las secciones principales de la aplicación.</p>
+        </div>
+
+        <div class="manual-grid">
+          
+          <!-- SECCIÓN 1 -->
+          <div class="manual-card">
+            <span class="manual-icon">🏠</span>
+            <h3 class="manual-card-title">Pestaña: Inicio</h3>
+            <p class="manual-card-desc">
+              Esta sección sirve como enciclopedia teórica y visual sobre la Metrología Mecánica Industrial. Ofrece un recorrido completo por los conceptos y las herramientas fundamentales de taller.
+            </p>
+            <div class="manual-steps-box">
+              <h4>¿Cómo utilizarla?</h4>
+              <ul class="steps-list">
+                <li class="step-item">
+                  <span class="step-num">1</span>
+                  <span>Explora la introducción teórica y las tres categorías de instrumentos.</span>
+                </li>
+                <li class="step-item">
+                  <span class="step-num">2</span>
+                  <span>Examina las 9 tarjetas con información interactiva para cada instrumento principal.</span>
+                </li>
+                <li class="step-item">
+                  <span class="step-num">3</span>
+                  <span>Accede a los videotutoriales complementarios de YouTube al final de la página.</span>
+                </li>
+              </ul>
+            </div>
+            <a href="index.html" class="manual-btn manual-btn-orange">Ir a Inicio</a>
+          </div>
+
+          <!-- SECCIÓN 2 -->
+          <div class="manual-card">
+            <span class="manual-icon">📊</span>
+            <h3 class="manual-card-title">Pestaña: Presentación</h3>
+            <p class="manual-card-desc">
+              Integra de forma directa la presentación académica interactiva en formato diapositiva alojada en la nube, permitiendo estudiar de forma estructurada los principios del proyecto.
+            </p>
+            <div class="manual-steps-box">
+              <h4>¿Cómo utilizarla?</h4>
+              <ul class="steps-list">
+                <li class="step-item">
+                  <span class="step-num">1</span>
+                  <span>Utiliza el visor inmersivo para interactuar directamente con las diapositivas.</span>
+                </li>
+                <li class="step-item">
+                  <span class="step-num">2</span>
+                  <span>Navega utilizando los botones táctiles e interactivos integrados en la diapositiva.</span>
+                </li>
+                <li class="step-item">
+                  <span class="step-num">3</span>
+                  <span>Si experimentas limitaciones de iframe, utiliza el botón "Ver en Vercel" para acceder de forma externa.</span>
+                </li>
+              </ul>
+            </div>
+            <a href="presentacion.html" class="manual-btn manual-btn-blue">Ir a Presentación</a>
+          </div>
+
+          <!-- SECCIÓN 3 -->
+          <div class="manual-card">
+            <span class="manual-icon">🛠️</span>
+            <h3 class="manual-card-title">Pestaña: Guía de Uso</h3>
+            <p class="manual-card-desc">
+              Módulo práctico con acordeones desplegables y filtros dinámicos que organizan las instrucciones de taller, partes, descripciones y precauciones para cada instrumento.
+            </p>
+            <div class="manual-steps-box">
+              <h4>¿Cómo utilizarla?</h4>
+              <ul class="steps-list">
+                <li class="step-item">
+                  <span class="step-num">1</span>
+                  <span>Utiliza los botones de categorías (Medidores, Comparadores, Verificadores) para filtrar la vista.</span>
+                </li>
+                <li class="step-item">
+                  <span class="step-num">2</span>
+                  <span>Haz clic en la cabecera de cualquier acordeón para expandir o contraer su información.</span>
+                </li>
+                <li class="step-item">
+                  <span class="step-num">3</span>
+                  <span>Revisa las listas estructuradas con descripciones, partes enumeradas, paso a paso y precauciones de seguridad.</span>
+                </li>
+              </ul>
+            </div>
+            <a href="guia.html" class="manual-btn manual-btn-green">Ir a Guía de Uso</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SECCIÓN INTERACTIVA: LISTA DE VERIFICACIÓN DE APRENDIZAJE -->
+      <div class="manual-section" id="learning-checklist-container" style="background-color: #f8f9fc; border: 1px solid rgba(26, 39, 68, 0.06);">
+        <div style="border-bottom: 2px solid rgba(26, 39, 68, 0.08); padding-bottom: 1.25rem; margin-bottom: 2rem;">
+          <h2 style="font-size: 1.5rem; color: #1a2744; font-weight: 800; display: flex; align-items: center; gap: 0.5rem;" id="checklist-heading">
+            <span>✅</span> Panel de Autoevaluación y Progreso de Aprendizaje
+          </h2>
+          <p style="color: #666666; font-size: 0.95rem; margin-top: 0.25rem;" id="checklist-subtext">Mide tu avance de aprendizaje marcando los objetivos que has explorado.</p>
+        </div>
+
+        <div style="background: white; padding: 2rem; border-radius: 12px; border: 1px solid rgba(26, 39, 68, 0.04);">
+          <!-- Progress Bar -->
+          <div style="margin-bottom: 2rem;">
+            <div style="display: flex; justify-content: space-between; font-weight: 700; color: #1a2744; margin-bottom: 0.5rem; font-size: 0.95rem;">
+              <span>Progreso de Inducción</span>
+              <span id="progress-percentage">0%</span>
+            </div>
+            <div style="background-color: #e5e7eb; height: 12px; border-radius: 6px; overflow: hidden; display: flex;">
+              <div id="progress-fill-bar" style="width: 0%; background-color: #e8760a; transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1); height: 100%;"></div>
+            </div>
+          </div>
+
+          <!-- Checklist Items -->
+          <div style="display: grid; grid-template-columns: 1fr; gap: 1.25rem;" class="checklist-grid">
+            <label class="checklist-item-wrapper" style="display: flex; align-items: flex-start; gap: 1rem; cursor: pointer; padding: 1rem; border-radius: 8px; border: 1px solid rgba(26, 39, 68, 0.04); background-color: #f8f9fc; transition: all 0.2s ease;">
+              <input type="checkbox" class="progress-checkbox" style="width: 20px; height: 20px; accent-color: #e8760a; cursor: pointer; margin-top: 2px;" data-weight="25">
+              <div>
+                <strong style="color: #1a2744; display: block; font-size: 0.95rem;">Ver el Video Demostrativo Completo</strong>
+                <span style="color: #666666; font-size: 0.85rem;">He visualizado el video explicativo de Carlos Rondón detallando el funcionamiento de la aplicación.</span>
+              </div>
+            </label>
+
+            <label class="checklist-item-wrapper" style="display: flex; align-items: flex-start; gap: 1rem; cursor: pointer; padding: 1rem; border-radius: 8px; border: 1px solid rgba(26, 39, 68, 0.04); background-color: #f8f9fc; transition: all 0.2s ease;">
+              <input type="checkbox" class="progress-checkbox" style="width: 20px; height: 20px; accent-color: #1a2744; cursor: pointer; margin-top: 2px;" data-weight="25">
+              <div>
+                <strong style="color: #1a2744; display: block; font-size: 0.95rem;">Explorar las Herramientas en el Inicio</strong>
+                <span style="color: #666666; font-size: 0.85rem;">He revisado el marco teórico introductorio de la metrología y las 9 tarjetas de instrumentos en la página principal.</span>
+              </div>
+            </label>
+
+            <label class="checklist-item-wrapper" style="display: flex; align-items: flex-start; gap: 1rem; cursor: pointer; padding: 1rem; border-radius: 8px; border: 1px solid rgba(26, 39, 68, 0.04); background-color: #f8f9fc; transition: all 0.2s ease;">
+              <input type="checkbox" class="progress-checkbox" style="width: 20px; height: 20px; accent-color: #10b981; cursor: pointer; margin-top: 2px;" data-weight="25">
+              <div>
+                <strong style="color: #1a2744; display: block; font-size: 0.95rem;">Interactuar con la Presentación de Diapositivas</strong>
+                <span style="color: #666666; font-size: 0.85rem;">He navegado de manera interactiva por el visor inmersivo de diapositivas académicas.</span>
+              </div>
+            </label>
+
+            <label class="checklist-item-wrapper" style="display: flex; align-items: flex-start; gap: 1rem; cursor: pointer; padding: 1rem; border-radius: 8px; border: 1px solid rgba(26, 39, 68, 0.04); background-color: #f8f9fc; transition: all 0.2s ease;">
+              <input type="checkbox" class="progress-checkbox" style="width: 20px; height: 20px; accent-color: #8b5cf6; cursor: pointer; margin-top: 2px;" data-weight="25">
+              <div>
+                <strong style="color: #1a2744; display: block; font-size: 0.95rem;">Estudiar las Guías de Uso Práctico</strong>
+                <span style="color: #666666; font-size: 0.85rem;">He comprendido los pasos de medición, partes técnicas y advertencias de seguridad en la pestaña Guía de Uso.</span>
+              </div>
+            </label>
+          </div>
+
+          <!-- Congratulatory message -->
+          <div id="congratulations-msg" style="margin-top: 1.5rem; padding: 1.25rem; background-color: rgba(16, 185, 129, 0.08); border: 1px dashed #10b981; border-radius: 8px; display: none; align-items: center; gap: 0.75rem; transition: all 0.3s ease;">
+            <span style="font-size: 1.5rem;">🎉</span>
+            <div>
+              <strong style="color: #065f46; display: block; font-size: 0.95rem;">¡Felicidades, has completado toda la inducción!</strong>
+              <span style="color: #047857; font-size: 0.85rem;">Ahora dominas a nivel teórico e interactivo el uso y funcionamiento de este portal web de metrología.</span>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </main>
+
+  <!-- Botón Scroll Top -->
+  <button class="scroll-top-btn" id="scroll-top-button" aria-label="Volver arriba">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <img src="logo_header.svg" alt="Santiago Mariño Logo" class="footer-logo" id="footer-logo-img">
+      <div class="footer-info">
+        <h4 style="color: #ffffff; margin-bottom: 0.5rem;" id="footer-college-name">I.U.P. Santiago Mariño</h4>
+        <p style="margin-bottom: 0;" id="footer-ext-text">Extensión Nva Esparta — Porlamar, Estado Nueva Esparta</p>
+        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.4);" id="footer-cátedra-text">Cátedra de Metrología y Control de Calidad</p>
+      </div>
+      <div class="footer-copyright" id="footer-copyright-bar">
+        <span>© 2025 Carlos Rondón — Todos los derechos reservados</span>
+        <span>Proyecto Académico — Metrología Mecánica Industrial</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 1. MOBILE MENU HAMBURGUER FUNCTIONALITY
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const navMenu = document.getElementById('nav-menu-list');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // 2. SCROLL TO TOP BUTTON
+    const scrollTopBtn = document.getElementById('scroll-top-button');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // 3. INTERACTIVE LEARNING CHECKLIST PROGRESS
+    const checkboxes = document.querySelectorAll('.progress-checkbox');
+    const progressPercentage = document.getElementById('progress-percentage');
+    const progressFillBar = document.getElementById('progress-fill-bar');
+    const congratulationsMsg = document.getElementById('congratulations-msg');
+
+    function updateProgress() {
+      let totalWeight = 0;
+      let checkedWeight = 0;
+      
+      checkboxes.forEach((cb, idx) => {
+        const weight = parseInt(cb.getAttribute('data-weight')) || 25;
+        totalWeight += weight;
+        
+        // Load from localStorage if present
+        const savedState = localStorage.getItem(`checklist-item-${idx}`);
+        if (savedState === 'true') {
+          cb.checked = true;
+        }
+        
+        if (cb.checked) {
+          checkedWeight += weight;
+          cb.closest('.checklist-item-wrapper').style.backgroundColor = 'rgba(26, 39, 68, 0.02)';
+          cb.closest('.checklist-item-wrapper').style.borderColor = 'rgba(26, 39, 68, 0.15)';
+        } else {
+          cb.closest('.checklist-item-wrapper').style.backgroundColor = '#f8f9fc';
+          cb.closest('.checklist-item-wrapper').style.borderColor = 'rgba(26, 39, 68, 0.04)';
+        }
+      });
+
+      const percentage = Math.round((checkedWeight / totalWeight) * 100);
+      progressPercentage.textContent = `${percentage}%`;
+      progressFillBar.style.width = `${percentage}%`;
+
+      if (percentage === 100) {
+        congratulationsMsg.style.display = 'flex';
+      } else {
+        congratulationsMsg.style.display = 'none';
+      }
+    }
+
+    checkboxes.forEach((cb, idx) => {
+      cb.addEventListener('change', () => {
+        localStorage.setItem(`checklist-item-${idx}`, cb.checked);
+        updateProgress();
+      });
+    });
+
+    // Run once on load
+    updateProgress();
+  </script>
+</body>
+</html>

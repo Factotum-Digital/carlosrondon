@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Guía didáctica para el uso correcto de instrumentos de medición mecánica industrial. Consejos, precauciones y ejemplos.">
+  <title>Guía de Uso — Instrumentos de Medición</title>
+  <!-- Global Shared Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="header-logo" id="header-logo-link">
+        <img src="logo_header.svg" alt="Logo Santiago Mariño" id="header-logo-img">
+        <span class="header-title" id="header-main-title">Carlos Rondon</span>
+      </a>
+      
+      <!-- Hamburguer menu toggle for mobile -->
+      <button class="menu-toggle" id="mobile-menu-toggle" aria-label="Abrir menú de navegación">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Navigation Menu -->
+      <nav>
+        <ul class="nav-menu" id="nav-menu-list">
+          <li><a href="index.html" class="nav-link" id="nav-link-home">Inicio</a></li>
+          <li><a href="presentacion.html" class="nav-link" id="nav-link-presentation">Presentación</a></li>
+          <li><a href="guia.html" class="nav-link active" id="nav-link-guide">Guía de Uso</a></li>
+          <li><a href="evaluacion.html" class="nav-link" id="nav-link-evaluation">Navegación</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Title Section -->
+  <main class="py-section">
+    <div class="container">
+      <h1 class="section-title text-center" id="guide-main-title">Guía de Uso de Instrumentos de Medición</h1>
+      <p class="section-subtitle text-center" id="guide-intro-text">
+        Esta guía te enseña el uso correcto de los principales instrumentos de medición mecánica. Sigue cada paso para garantizar mediciones precisas y seguras en el taller.
+      </p>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs" id="filter-tabs-container">
+        <button class="filter-btn active" data-filter="all" id="btn-filter-all">Todos los Instrumentos</button>
+        <button class="filter-btn" data-filter="directos" id="btn-filter-directos">Medidores Directos</button>
+        <button class="filter-btn" data-filter="comparadores" id="btn-filter-comparadores">Comparadores</button>
+        <button class="filter-btn" data-filter="verificadores" id="btn-filter-verificadores">Verificadores</button>
+      </div>
+
+      <!-- ACCORDIONS CONTAINER -->
+      <div class="accordions-container" id="guide-accordions-group">
+        
+        <!-- ACORDEÓN 1 — Micrómetro -->
+        <article class="accordion-item" id="acc-item-1" data-category="directos">
+          <div class="accordion-header" id="acc-header-1">
+            <div class="accordion-header-title">
+              <span class="accordion-num">1</span>
+              <h2>Micrómetro</h2>
+              <span class="category-badge directos">Medidor Directo</span>
+            </div>
+            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+          <div class="accordion-content" id="acc-content-1">
+            <div class="accordion-body">
+              <p><strong>Descripción:</strong> Instrumento de alta precisión basado en el principio del tornillo micrométrico. Su estructura permite medir dimensiones con una exactitud de centésimas o milésimas de milímetro.</p>
+              
+              <div class="accordion-grid">
+                <!-- Partes -->
+                <div class="accordion-card">
+                  <span class="accordion-section-title">Partes principales:</span>
+                  <ul class="accordion-list">
+                    <li>Yunque fijo (punto de referencia)</li>
+                    <li>Husillo móvil (vástago de medición)</li>
+                    <li>Trinquete (limitador de fuerza)</li>
+                    <li>Tambor graduado (escala circular)</li>
+                    <li>Freno o dispositivo de bloqueo</li>
+                  </ul>
+                </div>
+                <!-- Pasos -->
+                <div class="accordion-card">
+                  <span class="accordion-section-title">Pasos de uso:</span>
+                  <ol class="accordion-steps">
+                    <li><span class="accordion-steps-num">1</span>Limpiar minuciosamente las caras de medición con un paño suave.</li>
+                    <li><span class="accordion-steps-num">2</span>Verificar la alineación del cero cerrando suavemente el husillo.</li>
+                    <li><span class="accordion-steps-num">3</span>Colocar la pieza a medir entre el yunque fijo y el husillo móvil.</li>
+                    <li><span class="accordion-steps-num">4</span>Girar el trinquete con suavidad hasta escuchar 2 o 3 clics (evita dañar la rosca).</li>
+                    <li><span class="accordion-steps-num">5</span>Asegurar el freno y leer la escala del cuerpo más la del tambor graduado.</li>
+                    <li><span class="accordion-steps-num">6</span>Registrar con precisión la medida obtenida.</li>
+                  </ol>
+                </div>
+              </div>
+
+              <!-- Precauciones -->
+              <div class="accordion-precautions">
+                <svg class="precaution-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <div class="precaution-text">
+                  <p><strong>Precauciones:</strong> Utilizar siempre el trinquete para dar el apriete final, nunca la rosca o el tambor directamente. Limpiar las caras antes de cada medición para evitar errores por suciedad. No dejar caer el instrumento bajo ninguna circunstancia ya que perdería su calibración.</p>
+                </div>
+              </div>
+
+              <!-- Ejemplo Práctico -->
+              <div class="accordion-card practical-example" style="margin-top: 1.25rem;">
+                <p><strong>Ejemplo Práctico:</strong> Medir el diámetro de un eje de transmisión cilíndrico en el torno para verificar su ajuste preciso y tolerancia antes de montarlo en un rodamiento rígido de bolas.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ACORDEÓN 2 — Pie de Rey (Calibrador Vernier) -->
+        <article class="accordion-item" id="acc-item-2" data-category="directos">
+          <div class="accordion-header" id="acc-header-2">
+            <div class="accordion-header-title">
+              <span class="accordion-num">2</span>
+              <h2>Pie de Rey (Calibrador Vernier)</h2>
+              <span class="category-badge directos">Medidor Directo</span>
+            </div>
+            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+          <div class="accordion-content" id="acc-content-2">
+            <div class="accordion-body">
+              <p><strong>Descripción:</strong> Instrumento versátil y dinámico idóneo para tomar mediciones tridimensionales de exteriores, interiores y profundidades en un rango de milímetros o pulgadas.</p>
+              
+              <div class="accordion-grid">
+                <!-- Partes -->
+                <div class="accordion-card">
+                  <span class="accordion-section-title">Partes principales:</span>
+                  <ul class="accordion-list">
+                    <li>Mandíbulas exteriores (mordazas grandes)</li>
+                    <li>Mandíbulas interiores (puntas superiores)</li>
+                    <li>Sonda de profundidad (varilla trasera deslizante)</li>
+                    <li>Escala principal graduada (regla fija)</li>
+                    <li>Nonio o vernier (escala deslizante decimal)</li>
+                    <li>Freno de retención deslizante</li>
+                  </ul>
+                </div>
+                <!-- Pasos -->
+                <div class="accordion-card">
+                  <span class="accordion-section-title">Pasos de uso:</span>
+                  <ol class="accordion-steps">
+                    <li><span class="accordion-steps-num">1</span>Verificar visualmente que las mordazas cierren perfectamente en el cero.</li>
+                    <li><span class="accordion-steps-num">2</span>Abrir el calibrador e introducir la pieza a medir entre las mordazas.</li>
+                    <li><span class="accordion-steps-num">3</span>Cerrar suavemente el cursor móvil hasta que haga contacto plano y firme.</li>
+                    <li><span class="accordion-steps-num">4</span>Fijar el tornillo de freno para asegurar la posición de la escala móvil.</li>
+                    <li><span class="accordion-steps-num">5</span>Leer los milímetros enteros indicados por el cero del nonio en la escala principal.</li>
+                    <li><span class="accordion-steps-num">6</span>Sumar la fracción decimal localizando la línea del nonio que coincida con la regla fija.</li>
+                  </ol>
+                </div>
+              </div>
+
+              <!-- Precauciones -->
+              <div class="accordion-precautions">
+                <svg class="precaution-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <div class="precaution-text">
+                  <p><strong>Precauciones:</strong> No forzar ni presionar de más las mordazas sobre la pieza ya que flecta el metal. Medir siempre de forma estrictamente perpendicular a la pieza. Limpiar el instrumento con un paño limpio libre de aceite antes de cada sesión.</p>
+                </div>
+              </div>
+
+              <!-- Ejemplo Práctico -->
+              <div class="accordion-card practical-example" style="margin-top: 1.25rem;">
+                <p><strong>Ejemplo Práctico:</strong> Medir el diámetro interior de un agujero avellanado mecanizado en una placa de soporte para verificar si cumple la cota nominal requerida para alojar un pasador elástico.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ACORDEÓN 3 — Regla Metálica -->
+        <article class="accordion-item" id="acc-item-3" data-category="directos">
+          <div class="accordion-header" id="acc-header-3">
+            <div class="accordion-header-title">
+              <span class="accordion-num">3</span>
+              <h2>Regla Metálica</h2>
+              <span class="category-badge directos">Medidor Directo</span>
+            </div>
+            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+          <div class="accordion-content" id="acc-content-3">
+            <div class="accordion-body">
+              <p><strong>Descripción:</strong> Instrumento elemental de medición lineal directa fabricado en acero inoxidable de alta resistencia, idóneo para mediciones rápidas o trazos.</p>
+              
+              <div class="accordion-grid">
+                <!-- Partes -->
+                <div class="accordion-card">
+                  <span class="accordion-section-title">Partes principales:</span>
+                  <ul class="accordion-list">
+                    <li>Cuerpo plano de acero templado</li>
+                    <li>Escala milimétrica y centimétrica grabada por láser</li>
+                    <li>Escala secundaria en pulgadas (común en reverso)</li>
+                    <li>Extremo de referencia de origen cero plano</li>
+                  </ul>
+                </div>
+                <!-- Pasos -->
+                <div class="accordion-card">
+                  <span class="accordion-section-title">Pasos de uso:</span>
+                  <ol class="accordion-steps">
+                    <li><span class="accordion-steps-num">1</span>Apoyar firmemente el extremo cero de la regla en el borde inicial de la pieza.</li>
+                    <li><span class="accordion-steps-num">2</span>Alinear el borde de la regla de forma perfectamente paralela a la dimensión medida.</li>
+                    <li><span class="accordion-steps-num">3</span>Realizar la lectura visual del valor en la línea de graduación más próxima.</li>
+                  </ol>
+                </div>
+              </div>
+
+              <!-- Precauciones -->
+              <div class="accordion-precautions">
+                <svg class="precaution-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <div class="precaution-text">
+                  <p><strong>Precauciones:</strong> Nunca usar la regla como palanca, rascador o martillo. Mantener la superficie limpia de óxido lubricándola ligeramente. Tiene una precisión limitada a ±0.5 mm, por lo que no es apta para alta tolerancia dimensional.</p>
+                </div>
+              </div>
+
+              <!-- Ejemplo Práctico -->
+              <div class="accordion-card practical-example" style="margin-top: 1.25rem;">
+                <p><strong>Ejemplo Práctico:</strong> Verificar el largo total de una lámina o pletina estructural de acero al carbono antes de proceder al proceso de corte con sierra de banda en el taller.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ACORDEÓN 4 — Reloj Comparador -->
+        <article class="accordion-item" id="acc-item-4" data-category="comparadores">
+          <div class="accordion-header" id="acc-header-4">
+            <div class="accordion-header-title">
+              <span class="accordion-num">4</span>
+              <h2>Reloj Comparador</h2>
+              <span class="category-badge comparadores">Comparador</span>
+            </div>
+            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+          <div class="accordion-content" id="acc-content-4">
+            <div class="accordion-body">
+              <p><strong>Descripción:</strong> Instrumento amplificador mecánico que transforma pequeños desplazamientos lineales del palpador en un movimiento circular de la aguja, ideal para comparar piezas con un patrón.</p>
+              
+              <div class="accordion-grid">
+                <!-- Partes -->
+                <div class="accordion-card">
+                  <span class="accordion-section-title">Partes principales:</span>
+                  <ul class="accordion-list">
+                    <li>Palpador móvil inferior (punta esférica)</li>
+                    <li>Vástago de fijación y guía</li>
+                    <li>Corona o bisel giratorio exterior para ajuste a cero</li>
+                    <li>Aguja indicadora principal y esfera dial graduada</li>
+                    <li>Aguja contadora de revoluciones (esfera pequeña)</li>
+                  </ul>
+                </div>
+                <!-- Pasos -->
+                <div class="accordion-card">
+                  <span class="accordion-section-title">Pasos de uso:</span>
+                  <ol class="accordion-steps">
+                    <li><span class="accordion-steps-num">1</span>Fijar de forma robusta el reloj en una base o soporte magnético articulado.</li>
+                    <li><span class="accordion-steps-num">2</span>Apoyar la punta del palpador con cierta precarga sobre la pieza patrón de referencia.</li>
+                    <li><span class="accordion-steps-num">3</span>Girar la corona exterior hasta lograr alinear el cero con la aguja indicadora principal.</li>
+                    <li><span class="accordion-steps-num">4</span>Desplazar suavemente la pieza mecanizada bajo el palpador y registrar los giros o desvíos.</li>
+                    <li><span class="accordion-steps-num">5</span>Registrar la diferencia aritmética en centésimas respecto al patrón inicial.</li>
+                  </ol>
+                </div>
+              </div>
+
+              <!-- Precauciones -->
+              <div class="accordion-precautions">
+                <svg class="precaution-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <div class="precaution-text">
+                  <p><strong>Precauciones:</strong> Nunca dar golpes secos ni soltar bruscamente el palpador móvil. Asegurar que la base articulada esté firmemente bloqueada. Este instrumento no realiza mediciones absolutas por sí mismo, sino relativas y comparativas.</p>
+                </div>
+              </div>
+
+              <!-- Ejemplo Práctico -->
+              <div class="accordion-card practical-example" style="margin-top: 1.25rem;">
+                <p><strong>Ejemplo Práctico:</strong> Comprobar y corregir la excentricidad o descentramiento de un eje cilíndrico de acero girándolo lentamente sobre los puntos de centrado de un torno mecánico.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ACORDEÓN 5 — Goniómetro -->
+        <article class="accordion-item" id="acc-item-5" data-category="directos">
+          <div class="accordion-header" id="acc-header-5">
+            <div class="accordion-header-title">
+              <span class="accordion-num">5</span>
+              <h2>Goniómetro</h2>
+              <span class="category-badge directos">Medidor Directo</span>
+            </div>
+            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+          <div class="accordion-content" id="acc-content-5">
+            <div class="accordion-body">
+              <p><strong>Descripción:</strong> Transportador de ángulos mecánico de precisión dotado de una regla deslizante, útil para medir, trazar y verificar inclinaciones o declives geométricos.</p>
+              
+              <div class="accordion-grid">
+                <!-- Partes -->
+                <div class="accordion-card">
+                  <span class="accordion-section-title">Partes principales:</span>
+                  <ul class="accordion-list">
+                    <li>Cuerpo con disco graduado (escala circular de 360 grados)</li>
+                    <li>Brazo o regla fija integrada</li>
+                    <li>Brazo giratorio móvil deslizable</li>
+                    <li>Tornillo de fijación de posición angular</li>
+                    <li>Nonio o vernier angular decimal (minutos de arco)</li>
+                  </ul>
+                </div>
+                <!-- Pasos -->
+                <div class="accordion-card">
+                  <span class="accordion-section-title">Pasos de uso:</span>
+                  <ol class="accordion-steps">
+                    <li><span class="accordion-steps-num">1</span>Colocar la base o regla fija sobre la primera cara plana de referencia de la pieza.</li>
+                    <li><span class="accordion-steps-num">2</span>Ajustar y asentar el brazo móvil giratorio sobre la cara inclinada a medir.</li>
+                    <li><span class="accordion-steps-num">3</span>Verificar el contacto completo a contraluz para evitar rendijas de luz entre reglas y metal.</li>
+                    <li><span class="accordion-steps-num">4</span>Fijar fuertemente el tornillo moleteado para bloquear el ángulo.</li>
+                    <li><span class="accordion-steps-num">5</span>Leer los grados enteros en el disco y sumar los minutos adicionales usando la escala vernier.</li>
+                  </ol>
+                </div>
+              </div>
+
+              <!-- Precauciones -->
+              <div class="accordion-precautions">
+                <svg class="precaution-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <div class="precaution-text">
+                  <p><strong>Precauciones:</strong> Limpiar las superficies de la pieza de rebabas o impurezas antes de apoyar. Verificar siempre si se está evaluando el ángulo complementario (interior o exterior) para evitar lecturas invertidas.</p>
+                </div>
+              </div>
+
+              <!-- Ejemplo Práctico -->
+              <div class="accordion-card practical-example" style="margin-top: 1.25rem;">
+                <p><strong>Ejemplo Práctico:</strong> Verificar el ángulo exacto de un chaflán a 45 grados mecanizado en el extremo de una pieza prismática de aleación ligera antes de ser despachada.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ACORDEÓN 6 — Cinta Métrica -->
+        <article class="accordion-item" id="acc-item-6" data-category="directos">
+          <div class="accordion-header" id="acc-header-6">
+            <div class="accordion-header-title">
+              <span class="accordion-num">6</span>
+              <h2>Cinta Métrica</h2>
+              <span class="category-badge directos">Medidor Directo</span>
+            </div>
+            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+          <div class="accordion-content" id="acc-content-6">
+            <div class="accordion-body">
+              <p><strong>Descripción:</strong> Instrumento flexible portátil que consta de una fina fleje de acero graduado capaz de enrollarse de forma compacta en una carcasa ergonómica.</p>
+              
+              <div class="accordion-grid">
+                <!-- Partes -->
+                <div class="accordion-card">
+                  <span class="accordion-section-title">Partes principales:</span>
+                  <ul class="accordion-list">
+                    <li>Cinta o fleje de acero templado graduado</li>
+                    <li>Gancho o uña metálica móvil en el extremo (compensación de holgura)</li>
+                    <li>Carcasa de alta resistencia</li>
+                    <li>Muelle interno de retorno automático</li>
+                    <li>Botón de freno deslizante de bloqueo</li>
+                  </ul>
+                </div>
+                <!-- Pasos -->
+                <div class="accordion-card">
+                  <span class="accordion-section-title">Pasos de uso:</span>
+                  <ol class="accordion-steps">
+                    <li><span class="accordion-steps-num">1</span>Enganchar firmemente la uña en el extremo inicial de la pieza a dimensionar.</li>
+                    <li><span class="accordion-steps-num">2</span>Extender horizontalmente la cinta de acero en línea recta paralela al objeto.</li>
+                    <li><span class="accordion-steps-num">3</span>Aplicar tensión adecuada y leer el valor numérico en la marca final correspondiente.</li>
+                    <li><span class="accordion-steps-num">4</span>Fijar el freno temporal si se requiere retener la lectura.</li>
+                  </ol>
+                </div>
+              </div>
+
+              <!-- Precauciones -->
+              <div class="accordion-precautions">
+                <svg class="precaution-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <div class="precaution-text">
+                  <p><strong>Precauciones:</strong> No doblar el fleje bruscamente ya que se quebrará el acero. Acompañar siempre el retorno de la cinta al retraerse usando la mano, para evitar cortes en los dedos o el desprendimiento de la uña por impacto fuerte.</p>
+                </div>
+              </div>
+
+              <!-- Ejemplo Práctico -->
+              <div class="accordion-card practical-example" style="margin-top: 1.25rem;">
+                <p><strong>Ejemplo Práctico:</strong> Medir y delimitar la longitud total de corte de una viga estructural de perfil en I de 6 metros de largo en la zona de almacenamiento primario.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ACORDEÓN 7 — Compases de Interiores y Espesores -->
+        <article class="accordion-item" id="acc-item-7" data-category="comparadores">
+          <div class="accordion-header" id="acc-header-7">
+            <div class="accordion-header-title">
+              <span class="accordion-num">7</span>
+              <h2>Compases de Interiores y Espesores</h2>
+              <span class="category-badge comparadores">Comparador</span>
+            </div>
+            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+          <div class="accordion-content" id="acc-content-7">
+            <div class="accordion-body">
+              <p><strong>Descripción:</strong> Instrumentos articulados sin escala graduada, empleados para tomar medidas indirectas transfiriendo la separación de sus puntas a una regla o calibre.</p>
+              
+              <div class="accordion-grid">
+                <!-- Partes -->
+                <div class="accordion-card">
+                  <span class="accordion-section-title">Partes principales:</span>
+                  <ul class="accordion-list">
+                    <li>Dos brazos de acero articulados de forma curva o recta</li>
+                    <li>Tornillo regulador milimétrico con resorte de tensión (en modelos de muelle)</li>
+                    <li>Puntas de contacto templadas y rectificadas</li>
+                    <li>Tuerca de ajuste rápido o resorte central</li>
+                  </ul>
+                </div>
+                <!-- Pasos -->
+                <div class="accordion-card">
+                  <span class="accordion-section-title">Pasos de uso:</span>
+                  <ol class="accordion-steps">
+                    <li><span class="accordion-steps-num">1</span>Ajustar las puntas del compás a una apertura estimada ligeramente superior a la medida.</li>
+                    <li><span class="accordion-steps-num">2</span>Introducir las puntas en la zona interior o encajarlas alrededor de la zona exterior.</li>
+                    <li><span class="accordion-steps-num">3</span>Girar el tornillo milimétrico hasta que las puntas rocen suavemente las paredes sin holgura.</li>
+                    <li><span class="accordion-steps-num">4</span>Retirar con cuidado el compás manteniendo fijada la posición angular.</li>
+                    <li><span class="accordion-steps-num">5</span>Colocar las puntas del compás sobre una regla metálica graduada para leer el valor exacto de la apertura.</li>
+                  </ol>
+                </div>
+              </div>
+
+              <!-- Precauciones -->
+              <div class="accordion-precautions">
+                <svg class="precaution-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <div class="precaution-text">
+                  <p><strong>Precauciones:</strong> Al ser un instrumento de transferencia, evitar movimientos bruscos que alteren la posición de los brazos tras medir. Comprobar periódicamente que las puntas no sufran desgaste ni deformaciones físicas.</p>
+                </div>
+              </div>
+
+              <!-- Ejemplo Práctico -->
+              <div class="accordion-card practical-example" style="margin-top: 1.25rem;">
+                <p><strong>Ejemplo Práctico:</strong> Medir el diámetro interior de una cajera de difícil acceso o un canal semicircular interior profundo donde un calibrador Vernier estándar no logra ingresar de frente.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ACORDEÓN 8 — Manómetro -->
+        <article class="accordion-item" id="acc-item-8" data-category="directos">
+          <div class="accordion-header" id="acc-header-8">
+            <div class="accordion-header-title">
+              <span class="accordion-num">8</span>
+              <h2>Manómetro</h2>
+              <span class="category-badge directos">Medidor Directo</span>
+            </div>
+            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+          <div class="accordion-content" id="acc-content-8">
+            <div class="accordion-body">
+              <p><strong>Descripción:</strong> Instrumento indicador que mide la presión hidrostática o neumática encerrada en circuitos de fluidos, determinando la diferencia entre el sistema y la presión atmosférica local.</p>
+              
+              <div class="accordion-grid">
+                <!-- Partes -->
+                <div class="accordion-card">
+                  <span class="accordion-section-title">Partes principales:</span>
+                  <ul class="accordion-list">
+                    <li>Tubo de Bourdon curvado interno o diafragma elástico</li>
+                    <li>Mecanismo amplificador de engranajes y sector dentado</li>
+                    <li>Aguja indicadora de giro radial</li>
+                    <li>Esfera graduada con lecturas en escalas Bar, PSI o Pascales</li>
+                    <li>Racor metálico de conexión roscada de entrada</li>
+                  </ul>
+                </div>
+                <!-- Pasos -->
+                <div class="accordion-card">
+                  <span class="accordion-section-title">Pasos de uso:</span>
+                  <ol class="accordion-steps">
+                    <li><span class="accordion-steps-num">1</span>Verificar que la escala máxima del manómetro supere la presión estimada de trabajo.</li>
+                    <li><span class="accordion-steps-num">2</span>Enroscar de forma estanca el racor a la toma de presión del sistema utilizando teflón.</li>
+                    <li><span class="accordion-steps-num">3</span>Abrir con lentitud la válvula reguladora de paso para evitar golpes de ariete.</li>
+                    <li><span class="accordion-steps-num">4</span>Esperar a que la aguja se estabilice libre de vibraciones antes de tomar la lectura.</li>
+                    <li><span class="accordion-steps-num">5</span>Cerrar la válvula y purgar la presión del tramo antes de desenroscar el racor.</li>
+                  </ol>
+                </div>
+              </div>
+
+              <!-- Precauciones -->
+              <div class="accordion-precautions">
+                <svg class="precaution-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <div class="precaution-text">
+                  <p><strong>Precauciones:</strong> Nunca exceder el límite de presión máxima grabado en el dial ya que deformaría el tubo Bourdon de forma irreversible. Emplear manómetros de acero inoxidable adecuados para fluidos corrosivos o purgar el aire remanente.</p>
+                </div>
+              </div>
+
+              <!-- Ejemplo Práctico -->
+              <div class="accordion-card practical-example" style="margin-top: 1.25rem;">
+                <p><strong>Ejemplo Práctico:</strong> Monitorear la presión en el circuito hidráulico de una prensa de embutición metálica para verificar que actúe bajo las toneladas de fuerza recomendadas por diseño.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ACORDEÓN 9 — Galgas (Calibres Fijos) -->
+        <article class="accordion-item" id="acc-item-9" data-category="verificadores">
+          <div class="accordion-header" id="acc-header-9">
+            <div class="accordion-header-title">
+              <span class="accordion-num">9</span>
+              <h2>Galgas (Calibres Fijos)</h2>
+              <span class="category-badge verificadores">Verificador</span>
+            </div>
+            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+          <div class="accordion-content" id="acc-content-9">
+            <div class="accordion-body">
+              <p><strong>Descripción:</strong> Conjunto o abanico de láminas delgadas de acero templado calibradas a espesores fijos muy rigurosos, ideales para evaluar ranuras estrechas u holguras.</p>
+              
+              <div class="accordion-grid">
+                <!-- Partes -->
+                <div class="accordion-card">
+                  <span class="accordion-section-title">Partes principales:</span>
+                  <ul class="accordion-list">
+                    <li>Juego de láminas de acero elástico (espesores de 0.05 mm a 3.00 mm)</li>
+                    <li>Soporte de sujeción metálico tipo navaja</li>
+                    <li>Valor de espesor nominal grabado con láser en cada lámina</li>
+                    <li>Tornillo pasador pivotante de fijación</li>
+                  </ul>
+                </div>
+                <!-- Pasos -->
+                <div class="accordion-card">
+                  <span class="accordion-section-title">Pasos de uso:</span>
+                  <ol class="accordion-steps">
+                    <li><span class="accordion-steps-num">1</span>Limpiar completamente de aceites viejos o polvo la holgura que se desea evaluar.</li>
+                    <li><span class="accordion-steps-num">2</span>Seleccionar una lámina de galga con el espesor estimado inicial.</li>
+                    <li><span class="accordion-steps-num">3</span>Deslizar con cuidado la lámina dentro de la ranura o espacio libre.</li>
+                    <li><span class="accordion-steps-num">4</span>Si entra con una resistencia leve sin holgura apreciable, ese es el espesor exacto.</li>
+                    <li><span class="accordion-steps-num">5</span>De lo contrario, alternar con galgas de espesor superior o inferior hasta verificar.</li>
+                  </ol>
+                </div>
+              </div>
+
+              <!-- Precauciones -->
+              <div class="accordion-precautions">
+                <svg class="precaution-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <div class="precaution-text">
+                  <p><strong>Precauciones:</strong> Evitar doblar o forzar las láminas delgadas ya que se deforman y alteran su espesor calibrado de fábrica. Limpiar el juego antes de guardarlo engrasándolas ligeramente para evitar su oxidación.</p>
+                </div>
+              </div>
+
+              <!-- Ejemplo Práctico -->
+              <div class="accordion-card practical-example" style="margin-top: 1.25rem;">
+                <p><strong>Ejemplo Práctico:</strong> Medir y ajustar la holgura existente entre las colas de las válvulas de admisión y escape y sus respectivos balancines (taqués) en la culata de un motor de combustión interna.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- GENERAL TIPS SECTION -->
+      <section class="tips-container" id="general-tips-box">
+        <h2 id="tips-main-title">Recomendaciones de Uso y Cuidado General</h2>
+        <div class="tips-grid" id="tips-grid-wrapper">
+          <!-- Tip 1 -->
+          <article class="tip-item" id="tip-1">
+            <svg class="tip-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            <div class="tip-text">
+              <h3 id="tip-h3-1">Limpieza Preventiva</h3>
+              <p id="tip-p-1">Limpia siempre de forma cuidadosa el instrumento antes de comenzar una lectura y justo después de utilizarlo para prevenir que rebabas o aceites dañen las superficies de contacto pulidas.</p>
+            </div>
+          </article>
+          
+          <!-- Tip 2 -->
+          <article class="tip-item" id="tip-2">
+            <svg class="tip-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            <div class="tip-text">
+              <h3 id="tip-h3-2">Calibración de Rutina</h3>
+              <p id="tip-p-2">Verifica periódicamente el cero absoluto del instrumento y realiza calibraciones preventivas antes de llevar a cabo mediciones dimensionales de alta relevancia técnica en el taller.</p>
+            </div>
+          </article>
+
+          <!-- Tip 3 -->
+          <article class="tip-item" id="tip-3">
+            <svg class="tip-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            <div class="tip-text">
+              <h3 id="tip-h3-3">Protección Física</h3>
+              <p id="tip-p-3">Guarda siempre las herramientas en sus estuches y fundas protectoras acolchadas originales. Evita guardarlas apiladas junto a otras herramientas que las puedan rayar o deformar.</p>
+            </div>
+          </article>
+
+          <!-- Tip 4 -->
+          <article class="tip-item" id="tip-4">
+            <svg class="tip-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            <div class="tip-text">
+              <h3 id="tip-h3-4">Respeto Instrumental</h3>
+              <p id="tip-p-4">Nunca forces la maquinaria de ajuste fino de un instrumento, ni utilices calibres de alta precisión como palancas, raspadores, destornilladores o martillos circunstanciales.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="text-center" style="margin-top: 2.5rem;" id="tips-reg-box">
+          <p style="font-style: italic; font-size: 1.05rem; color: #ffe3d1;" id="tips-end-phrase">"Registra siempre las mediciones en un documento o planilla de control de calidad para su trazabilidad técnica."</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <img src="logo_header.svg" alt="Santiago Mariño Logo" class="footer-logo" id="footer-logo-img">
+      <div class="footer-info">
+        <h4 style="color: #ffffff; margin-bottom: 0.5rem;" id="footer-college-name">I.U.P. Santiago Mariño</h4>
+        <p style="margin-bottom: 0;" id="footer-ext-text">Extensión Nva Esparta — Porlamar, Estado Nueva Esparta</p>
+        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.4);" id="footer-cátedra-text">Cátedra de Metrología y Control de Calidad</p>
+      </div>
+      <div class="footer-copyright" id="footer-copyright-bar">
+        <span>© 2025 Carlos Rondón — Todos los derechos reservados</span>
+        <span>Proyecto Académico — Metrología Mecánica Industrial</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 1. MOBILE MENU HAMBURGUER FUNCTIONALITY
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const navMenu = document.getElementById('nav-menu-list');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // 2. ACCORDION LOGIC WITH SMOOTH MAX-HEIGHT ANIMATIONS
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+    accordionHeaders.forEach(header => {
+      header.addEventListener('click', function() {
+        const item = this.parentElement;
+        const content = item.querySelector('.accordion-content');
+        const isActive = item.classList.contains('active');
+
+        // Close all other accordions
+        document.querySelectorAll('.accordion-item').forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+            otherItem.querySelector('.accordion-content').style.maxHeight = null;
+          }
+        });
+
+        // Toggle current accordion
+        if (isActive) {
+          item.classList.remove('active');
+          content.style.maxHeight = null;
+        } else {
+          item.classList.add('active');
+          // Set max-height equal to scrollHeight to trigger transition
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    });
+
+    // Dynamically adjust accordion height on window resize
+    window.addEventListener('resize', () => {
+      document.querySelectorAll('.accordion-item.active').forEach(item => {
+        const content = item.querySelector('.accordion-content');
+        content.style.maxHeight = content.scrollHeight + "px";
+      });
+    });
+
+    // 3. CATEGORY FILTERING LOGIC
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const accordionItems = document.querySelectorAll('.accordion-item');
+
+    function filterCategory(category, shouldScroll = false) {
+      // Update active button state
+      filterButtons.forEach(btn => {
+        if (btn.getAttribute('data-filter') === category) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      // Filter elements
+      accordionItems.forEach(item => {
+        const itemCategory = item.getAttribute('data-category');
+        if (category === 'all' || itemCategory === category) {
+          item.style.display = 'block';
+          setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0)';
+          }, 20);
+        } else {
+          item.style.opacity = '0';
+          item.style.transform = 'translateY(10px)';
+          item.style.display = 'none';
+          
+          // Collapse if it was open
+          if (item.classList.contains('active')) {
+            item.classList.remove('active');
+            item.querySelector('.accordion-content').style.maxHeight = null;
+          }
+        }
+      });
+
+      if (shouldScroll) {
+        setTimeout(() => {
+          document.getElementById('filter-tabs-container')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 150);
+      }
+    }
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const filterValue = this.getAttribute('data-filter');
+        if (filterValue === 'all') {
+          history.replaceState(null, null, 'guia.html');
+        } else {
+          history.replaceState(null, null, '#category-' + filterValue);
+        }
+        filterCategory(filterValue);
+      });
+    });
+
+    // 4. COMBINED HASH ROUTING (FOR CATEGORIES & ACCORDIONS)
+    function handleHashRouting() {
+      const hash = window.location.hash;
+      if (!hash) {
+        filterCategory('all');
+        return;
+      }
+
+      // Route Category
+      if (hash.startsWith('#category-')) {
+        const category = hash.replace('#category-', '');
+        const validCategories = ['directos', 'comparadores', 'verificadores'];
+        if (validCategories.includes(category)) {
+          filterCategory(category, true);
+        }
+        return;
+      }
+
+      // Route Specific Accordion Item
+      if (hash.startsWith('#acc-item-')) {
+        const targetItem = document.querySelector(hash);
+        if (targetItem) {
+          // Set filter to 'all' to ensure targeted item is visible
+          filterCategory('all');
+
+          const content = targetItem.querySelector('.accordion-content');
+          
+          // Close other items
+          document.querySelectorAll('.accordion-item').forEach(otherItem => {
+            if (otherItem !== targetItem) {
+              otherItem.classList.remove('active');
+              otherItem.querySelector('.accordion-content').style.maxHeight = null;
+            }
+          });
+
+          // Open targeted item
+          if (!targetItem.classList.contains('active')) {
+            targetItem.classList.add('active');
+          }
+          content.style.maxHeight = content.scrollHeight + "px";
+          
+          setTimeout(() => {
+            targetItem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 150);
+        }
+      }
+    }
+
+    // Run on immediate execution and handle subsequent hash changes
+    window.addEventListener('hashchange', handleHashRouting);
+    // Wait for everything to load to ensure scrollHeight is calculated accurately
+    window.addEventListener('load', handleHashRouting);
+    // Fallback immediate check in case load already fired
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      handleHashRouting();
+    }
+  </script>
+</body>
+</html>

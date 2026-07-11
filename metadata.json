@@ -1,0 +1,6 @@
+{
+  "name": "Instrumentos de Medición",
+  "description": "Proyecto académico sobre instrumentos de medición mecánica industrial por Carlos Rondón",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

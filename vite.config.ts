@@ -17,6 +17,7 @@ export default defineConfig(() => {
           main: path.resolve(__dirname, 'index.html'),
           presentacion: path.resolve(__dirname, 'presentacion.html'),
           guia: path.resolve(__dirname, 'guia.html'),
+          evaluacion: path.resolve(__dirname, 'evaluacion.html'),
         },
       },
     },

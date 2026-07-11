@@ -305,6 +305,22 @@ header {
   z-index: 1;
 }
 
+.carousel-slide .slide-bg.bg-slide-1 {
+  background-image: url('hero1.jpeg');
+}
+
+.carousel-slide .slide-bg.bg-slide-2 {
+  background-image: url('hero2.jpeg');
+}
+
+.carousel-slide .slide-bg.bg-slide-3 {
+  background-image: url('hero3.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffffff;
+}
+
 /* Slide 3 custom background centering logo */
 .carousel-slide.slide-logo-center {
   background-color: #1a2744;

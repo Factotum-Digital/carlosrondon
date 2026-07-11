@@ -351,9 +351,14 @@
           <!-- Visitor Counter -->
           <div class="counter-wrapper" id="visitor-counter-wrapper">
             <span class="counter-title" id="counter-lbl">Visitas Registradas</span>
-            <a href="https://www.freecounterstat.com" title="hit counter" id="counter-stat-link">
-              <img src="https://counter5.optistats.ovh/private/freecounterstat.php?c=8hnhc7w379dnbkxlwcl4254kmbn74yqx" border="0" title="Contador de visitas" alt="Contador de visitas" style="border:none;" id="counter-stat-img">
-            </a>
+            <div class="counter-display" id="counter-display">
+              <span class="counter-digit">0</span>
+              <span class="counter-digit">0</span>
+              <span class="counter-digit">0</span>
+              <span class="counter-digit">0</span>
+              <span class="counter-digit">0</span>
+              <span class="counter-digit">0</span>
+            </div>
             <span style="font-size: 0.85rem; color: rgba(255,255,255,0.5);" id="counter-desc-text">Visitas registradas en este proyecto</span>
           </div>
         </div>
@@ -487,6 +492,39 @@
     animElements.forEach(element => {
       animObserver.observe(element);
     });
+
+    // 4. LOGICA DEL CONTADOR DE VISITAS DINÁMICO
+    (function() {
+      const counterDisplay = document.getElementById('counter-display');
+      if (!counterDisplay) return;
+
+      const isVisited = sessionStorage.getItem('visited_marino_session');
+      const url = isVisited 
+        ? '/api/visits' 
+        : '/api/visits?increment=true';
+
+      if (!isVisited) {
+        sessionStorage.setItem('visited_marino_session', 'true');
+      }
+
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          if (data && typeof data.count === 'number') {
+            const countStr = String(data.count).padStart(6, '0');
+            counterDisplay.innerHTML = '';
+            for (let i = 0; i < countStr.length; i++) {
+              const span = document.createElement('span');
+              span.className = 'counter-digit';
+              span.textContent = countStr[i];
+              counterDisplay.appendChild(span);
+            }
+          }
+        })
+        .catch(error => {
+          console.error('Error al cargar el contador de visitas:', error);
+        });
+    })();
   </script>
 </body>
 </html>

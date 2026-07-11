@@ -507,22 +507,66 @@
         sessionStorage.setItem('visited_marino_session', 'true');
       }
 
+      function updateDisplay(count) {
+        const countStr = String(count).padStart(6, '0');
+        localStorage.setItem('local_visits_count', countStr);
+        counterDisplay.innerHTML = '';
+        for (let i = 0; i < countStr.length; i++) {
+          const span = document.createElement('span');
+          span.className = 'counter-digit';
+          span.textContent = countStr[i];
+          counterDisplay.appendChild(span);
+        }
+      }
+
+      function fallbackExternal() {
+        const fallbackUrl = isVisited 
+          ? 'https://api.counterapi.dev/v1/santiago_marino_metrologia_academic/page_visits/'
+          : 'https://api.counterapi.dev/v1/santiago_marino_metrologia_academic/page_visits/up';
+        
+        fetch(fallbackUrl)
+          .then(res => {
+            if (!res.ok) throw new Error('External counter failed');
+            return res.json();
+          })
+          .then(data => {
+            if (data && typeof data.count === 'number') {
+              updateDisplay(data.count);
+            } else {
+              const localFallback = localStorage.getItem('local_visits_count') || '001428';
+              updateDisplay(parseInt(localFallback, 10));
+            }
+          })
+          .catch(err => {
+            console.error('External and internal counters failed:', err);
+            const localFallback = localStorage.getItem('local_visits_count') || '001428';
+            updateDisplay(parseInt(localFallback, 10));
+          });
+      }
+
+      // Initialize with previous stored value if exists, for better visual load speed
+      const savedCount = localStorage.getItem('local_visits_count');
+      if (savedCount) {
+        updateDisplay(parseInt(savedCount, 10));
+      }
+
       fetch(url)
-        .then(response => response.json())
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Internal API returned ' + response.status);
+          }
+          return response.json();
+        })
         .then(data => {
           if (data && typeof data.count === 'number') {
-            const countStr = String(data.count).padStart(6, '0');
-            counterDisplay.innerHTML = '';
-            for (let i = 0; i < countStr.length; i++) {
-              const span = document.createElement('span');
-              span.className = 'counter-digit';
-              span.textContent = countStr[i];
-              counterDisplay.appendChild(span);
-            }
+            updateDisplay(data.count);
+          } else {
+            throw new Error('Invalid response structure');
           }
         })
         .catch(error => {
-          console.error('Error al cargar el contador de visitas:', error);
+          console.warn('Internal API failed (typical on static platforms like Vercel), using external fallback:', error);
+          fallbackExternal();
         });
     })();
   </script>

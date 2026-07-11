@@ -265,7 +265,7 @@ header {
 /* --- Hero Carousel --- */
 .hero-carousel {
   position: relative;
-  height: 520px;
+  height: 580px;
   background-color: #121927;
   overflow: hidden;
 }
@@ -283,7 +283,8 @@ header {
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
   display: flex;
   align-items: center;
   z-index: 1;
@@ -291,6 +292,7 @@ header {
 
 .carousel-slide.active {
   opacity: 1;
+  visibility: visible;
   z-index: 2;
 }
 
@@ -1365,4 +1367,15 @@ footer {
   color: rgba(255, 255, 255, 0.75);
   font-size: 0.9rem;
   margin-bottom: 0;
+}
+
+/* Custom adjustments for slide 3 CTA placement */
+.slide3-cta-container {
+  margin-top: 240px !important;
+}
+
+@media (max-width: 768px) {
+  .slide3-cta-container {
+    margin-top: 140px !important;
+  }
 }
